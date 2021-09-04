@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box; /* Для правильного высчитывания размеров элементов */
 }
+body {
+  font-family: "Roboto", sans-serif;
+  padding-top: 44px;
+}
 .container {
   max-width: 1200px; /* Максимальная ширина всего контейнера */
   margin: auto; /* Одинаковые отступы по краям, которые располагают контейнер в центре */
@@ -10,20 +14,21 @@
   display: flex; /* Элементы выстраиваются на одной линии */
   align-items: center; /* На одной линии по центру относительно вертикали */
   justify-content: space-between; /* Раскидать элементы по ширине контейнера на равном расстоянии */
+  margin-bottom: 40px;
 }
-.search-input {
-  /* Поле ввода адреса доставки */
+.input-search {
+  /* Поле поиска блюд и ресторанов */
   background: #ffffff;
   border: 1px solid #d9d9d9;
-  border-radius: 2px; /* Скругление углов поля ввода */
-  height: 40px;
-  width: 690px;
+  border-radius: 2px;
+  height: 35px;
+  width: 310px;
   font-size: 16px;
-  line-height: 24px; /* Высота строки (межстрочный интервал) */
-  background-image: url(../img/input_address_logo.svg); /* Картинка домика для поля ввода */
-  background-repeat: no-repeat; /* Убираю "обои", т.е. оставляю только одну картинку */
-  background-position: left 11px center; /* Устанавливаю расположение слева по центру для картинки */
-  padding-left: 35px; /* Устанавливаю отступ слева для текста, чтобы не сливался с картинкой */
+  line-height: 24px;
+  background-image: url(../img/input_search_logo.svg);
+  background-repeat: no-repeat;
+  background-position: left 11px center;
+  padding-left: 35px;
 }
 .buttons {
   /* Стили для блока с кнопками  */
@@ -54,4 +59,161 @@
   /* Стили картинок кнопок */
   margin-right: 6px; /* Отодвигаю от картинки текст справа на 6px */
   padding-bottom: 2px;
+}
+.promo {
+  /* Стили блока Промо */
+  box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1); /* Задаю тень для всего блока */
+  background: #fff1b8;
+  background-image: url(../img/promo-image.png);
+  background-repeat: no-repeat;
+  background-position: top right -225px;
+  background-size: 950px;
+  border-radius: 10px;
+  padding: 68px 70px;
+  margin-bottom: 56px;
+}
+.promo-title {
+  /* Стили заголовка блока Промо */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 39px;
+  line-height: 46px;
+  color: #302c34;
+  margin: 0;
+  padding-bottom: 15px;
+}
+.promo-text {
+  /* Стили основного текста блока Промо */
+  font-style: normal;
+  font-weight: normal;
+  max-width: 540px;
+  font-size: 24px;
+  line-height: 28px;
+  color: #302c34;
+  margin: 0;
+}
+.section-heading {
+  /* Стили для всей шапки "Рестораны" */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 44px; /* Интервал между всей шапкой и карточками снизу */
+}
+.section-title {
+  /* Стили для заголовка "Рестораны" */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+  margin: 0;
+}
+.input-address {
+  /* Поле ввода адреса доставки */
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px; /* Скругление углов поля ввода */
+  height: 40px;
+  width: 690px;
+  font-size: 16px;
+  line-height: 24px; /* Высота строки (межстрочный интервал) */
+  background-image: url(../img/input_address_logo.svg); /* Картинка домика для поля ввода */
+  background-repeat: no-repeat; /* Убираю "обои", т.е. оставляю только одну картинку */
+  background-position: left 11px center; /* Устанавливаю расположение слева по центру для картинки */
+  padding-left: 35px; /* Устанавливаю отступ слева для текста, чтобы не сливался с картинкой */
+}
+.cards {
+  /* Стили для всего блока карточек */
+  display: flex;
+  align-items: flex-start; /* Выравнивание карточек в начале поперечной оси контейнера */
+  justify-content: space-between;
+  flex-wrap: wrap; /* Перенос на новую строчку всех карточке, которые не помещаются */
+}
+.card {
+  /* Стили карточки ресторана */
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 7px;
+  overflow: hidden; /* Для скруглённости картинки скрываю(обрезаю) всё, что находится за пределами карточки */
+  margin-bottom: 30px; /* Делаю вертикальный интервал между карточками */
+}
+.card-image {
+  /* Стили картинки в карточке */
+  width: 384px;
+  height: 250px;
+  object-fit: cover; /* Если заказчик подставляет картинку других размеров, то картинка будет обрезаться */
+}
+.card-text {
+  /* Стили для блока с текстом в карточке */
+  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+.card-heading {
+  /* Стили для заголовка текстового блока в карточке */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-title {
+  /* Стили для названия ресторана в карточке */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+}
+.card-tag {
+  /* Стили для времени доставки в карточке */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  background: #262626;
+  border-radius: 2px;
+  padding: 1px 8px;
+}
+.card-info {
+  /* Стили для информации о ресторане в карточке */
+  display: flex;
+  align-items: center;
+}
+.card-rating {
+  /* Стили для рейтинга в информации о ресторане */
+  margin-right: 26px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffc107;
+}
+.card-price {
+  /* Стили для цены в информации о ресторане */
+  margin-right: 10px;
+  color: #8c8c8c;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+}
+.card-price:after {
+  /* Псевдоэлемент для блока price, который позволит сделать точку между ценой и категорией */
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #8c8c8c;
+  display: inline-block; /* Делаю элемент(квадратная точка) строчно-блочным для его отображения */
+  vertical-align: middle; /* Выравниваю точку по вертикали */
+  border-radius: 50%; /* Скругляю квадратную точку до нормального вида */
+  margin-left: 10px;
+}
+.card-category {
+  /* Стили для категории в информации о ресторане */
+  color: #8c8c8c;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
 }
