@@ -297,6 +297,119 @@ body {
 .social-link:not(:last-child) {
   margin-right: 21px; /* Для всех социальных сетей данного класса, кроме последней */
 }
+.modal {
+  /* Стили для блока с модальным окном */
+  position: fixed; /* Фиксирую позицию окна, чтобы оно не прокручивалось */
+  left: 0; /* Приклеиваю окно к левому верхнему углу */
+  top: 0;
+  width: 100%; /* Растягиваю окно на 100% ширины и высоты относительно родительского тега body */
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+.is-open {
+  display: flex;
+}
+.modal-dialog {
+  /* Стили для модального окна */
+  margin: auto;
+  max-width: 780px;
+  width: 95%;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 40px 45px;
+}
+.modal-header {
+  display: flex; /* Стили для всего заголовка корзины */
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.modal-title {
+  margin: 0; /* Стили для всего элемента заголовка "Корзина" */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+.close {
+  font-size: 36px;
+  border: none;
+  background-color: transparent; /* Задаю прозрачный фон для кнопки закрытия корзины */
+}
+.modal-body {
+  margin-bottom: 52px; /* Стили для списка товаров в корзине */
+}
+.food-row {
+  display: flex; /* Стили для строки товара в корзине */
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 15px;
+}
+.food-name {
+  font-style: normal; /* Стили для наименования товара в строке товара в корзине */
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+}
+.food-price {
+  margin-left: auto; /* Стили для цены в строке товара в корзине */
+  margin-right: 47px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+.food-counter {
+  display: flex; /* Стили для блока кнопок в строке товара в корзине */
+  align-items: center;
+}
+.counter-button {
+  /* Стили для кнопок счётчика в строке товара в корзине */
+  width: 39px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #40a9ff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex; /* Задаю стили для расположения и внешнего вида символов внутри кнопок по центру */
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #40a9ff;
+}
+.counter {
+  font-style: normal; /* Стили для значения счётчика в строке товара в корзине */
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.modal-footer {
+  display: flex; /* Стили для подвала корзины*/
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-buttons {
+  display: flex; /* Стили для блока с кнопками в подвале корзины*/
+  align-items: center;
+}
+.modal-pricetag {
+  background: #262626;
+  border-radius: 5px;
+  color: #fff;
+  padding: 15px 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+}
 @media (max-width: 1366px) {
   /* Медиазапрос(директива) для адаптивной вёрстки */
   .container {

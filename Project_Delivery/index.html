@@ -8,13 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css\normalize.css"> <!-- Нормализация для различных браузеров -->
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Delivery food</title>
 </head>
 <body>
   <div class="container">
     <header class="header">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="logo animated tada">
         <img src="img\logo.svg" alt="Delivery Logo">
       </a>
       <input type="text" class="input input-address" placeholder="Адрес доставки">
@@ -23,7 +24,7 @@
           <img src="img/SignIn_button_logo.svg" alt="SignIn Logo" class="button-icon">
           <span class="button-text">Войти</span>
         </button>
-        <button class="button">
+        <button class="button" id="cart-button">
           <img src="img/basket_button_logo.svg" alt="Basket Logo" class="button-icon">
           <span class="button-text">Корзина</span>
         </button>
@@ -32,7 +33,7 @@
   </div>
   <main class="main">
     <div class="container">
-      <section class="promo">
+      <section class="promo wow bounceInRight" data-wow-delay="0.1s">
         <h1 class="promo-title">Онлайн-сервис <br /> доставки еды на дом</h1>
         <p class="promo-text">Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком</p>
       </section>
@@ -43,7 +44,7 @@
         </div>
         <div class="cards">
               
-          <a href="restaurant.html" class="card">
+          <a href="restaurant.html" class="card wow fadeInUp" data-wow-delay="0.1s">
               
             <img src="img/image1.jpg" alt="image" class="card-image">
             <div class="card-text">
@@ -63,7 +64,7 @@
               
           </a>
               
-          <a href="restaurant.html" class="card">
+          <a href="restaurant.html" class="card wow fadeInUp" data-wow-delay="0.1s">
               
             <img src="img/image2.jpg" alt="image" class="card-image">
             <div class="card-text">
@@ -83,7 +84,7 @@
               
           </a>
               
-          <a href="restaurant.html" class="card">
+          <a href="restaurant.html" class="card wow fadeInUp" data-wow-delay="0.1s">
               
             <img src="img/image3.jpg" alt="image" class="card-image">
             <div class="card-text">
@@ -103,7 +104,7 @@
               
           </a>
               
-          <a href="restaurant.html" class="card">
+          <a href="restaurant.html" class="card wow fadeInUp" data-wow-delay="0.1s">
               
             <img src="img/image4.jpg" alt="image" class="card-image">
             <div class="card-text">
@@ -123,7 +124,7 @@
               
           </a>
               
-          <a href="restaurant.html" class="card">
+          <a href="restaurant.html" class="card wow fadeInUp" data-wow-delay="0.1s">
               
             <img src="img/image5.jpg" alt="image" class="card-image">
             <div class="card-text">
@@ -143,7 +144,7 @@
               
           </a>
               
-          <a href="restaurant.html" class="card">
+          <a href="restaurant.html" class="card wow fadeInUp" data-wow-delay="0.1s">
               
             <img src="img/image6.jpg" alt="image" class="card-image">
             <div class="card-text">
@@ -185,5 +186,10 @@
       </div>
     </div>
   </footer>
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
