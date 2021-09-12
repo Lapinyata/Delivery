@@ -392,16 +392,16 @@ body {
   margin-right: 10px;
 }
 .modal-footer {
-  display: flex; /* Стили для подвала корзины*/
+  display: flex; /* Стили для подвала корзины */
   align-items: center;
   justify-content: space-between;
 }
 .footer-buttons {
-  display: flex; /* Стили для блока с кнопками в подвале корзины*/
+  display: flex; /* Стили для блока с кнопками в подвале корзины */
   align-items: center;
 }
 .modal-pricetag {
-  background: #262626;
+  background: #262626; /* Стили для блока с ценой в корзине */
   border-radius: 5px;
   color: #fff;
   padding: 15px 20px;
@@ -409,6 +409,9 @@ body {
   font-weight: bold;
   font-size: 20px;
   line-height: 23px;
+}
+.modal-pricetag-extended {
+  display: none; /* Убираю слово "Итого" */
 }
 @media (max-width: 1366px) {
   /* Медиазапрос(директива) для адаптивной вёрстки */
@@ -425,6 +428,11 @@ body {
   .card-category,
   .card-price {
     font-size: 15px;
+  }
+  .modal-dialog {
+    margin: auto; /* Стили для модального окна */
+    max-width: 650px;
+    width: 95%;
   }
 }
 @media (max-width: 992px) {
@@ -452,13 +460,15 @@ body {
   .footer-link {
     font-size: 16px; /* Изменяю размеры ссылок в подвале */
   }
+  .modal-dialog {
+    margin: auto;
+    max-width: 570px;
+    width: 95%;
+  }
 }
 @media (max-width: 768px) {
   .container {
-    max-width: 560px;
-  }
-  .button-primary {
-    margin-left: 10px;
+    max-width: 600px;
   }
   .promo {
     padding: 48px 50px;
@@ -485,8 +495,83 @@ body {
   .card .card-rating {
     flex-basis: 100%; /* Вся инфа, кроме рейтинга будет переноситься на другую строку. НО ТОЛЬКО внутри блока CARD */
   }
+  .modal-dialog {
+    margin: auto;
+    max-width: 400px;
+    width: 95%;
+  }
+  .modal-header {
+    margin-bottom: 35px; /* Стили для всего заголовка корзины */
+  }
+  .modal-title {
+    margin: 0; /* Стили для всего элемента заголовка "Корзина" */
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .close {
+    font-size: 24px;
+  }
+  .modal-body {
+    margin-bottom: 38px; /* Стили для списка товаров в корзине */
+  }
+  .food-row {
+    display: flex; /* Стили для строки товара в корзине */
+    margin-bottom: 15px;
+  }
+  .food-name {
+    font-style: normal; /* Стили для наименования товара в строке товара в корзине */
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .food-price {
+    margin-left: auto; /* Стили для цены в строке товара в корзине */
+    margin-right: 20px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .counter-button {
+    width: 30px; /* Стили для кнопок счётчика в строке товара в корзине */
+    height: 23px;
+    display: flex; /* Задаю стили для расположения и внешнего вида символов внутри кнопок по центру */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .counter {
+    font-style: normal; /* Стили для значения счётчика в строке товара в корзине */
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  .modal-pricetag {
+    padding: 11px 16px; /* Стили для блока с ценой в корзине */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .button-modal {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 8px 16px;
+    margin: 0;
+  }
+  .button-modal:not(:last-child) {
+    margin-right: 5px;
+  }
+  .footer-nav {
+    margin-left: 0;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 60px;
+  }
 }
-@media (max-width: 585px) {
+@media (max-width: 625px) {
   .container {
     max-width: 90%;
   }
@@ -515,8 +600,11 @@ body {
     max-width: 300px;
     line-height: 19px;
   }
+  .section-heading {
+    margin-bottom: 33px;
+  }
   .section-title {
-    font-size: 20px;
+    font-size: 25px;
   }
   .card {
     flex-basis: 100%;
@@ -536,6 +624,7 @@ body {
     order: 0;
     display: flex;
     flex-direction: column;
+    max-height: 100px;
   }
   .footer-logo {
     margin-right: 10px;
@@ -551,6 +640,9 @@ body {
 @media (max-width: 480px) {
   .button {
     min-height: 37px;
+  }
+  .button-primary {
+    margin-left: 0;
   }
   .button-text {
     display: none;
@@ -583,5 +675,86 @@ body {
   }
   .footer-link:not(:last-child) {
     margin-right: 0;
+  }
+  .modal-header {
+    margin-bottom: 25px; /* Стили для всего заголовка корзины */
+  }
+  .modal-title {
+    margin: 0; /* Стили для всего элемента заголовка "Корзина" */
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .close {
+    font-size: 22px;
+  }
+  .modal-body {
+    margin-bottom: 38px; /* Стили для списка товаров в корзине */
+  }
+  .food-row {
+    display: flex; /* Стили для строки товара в корзине */
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .food-name {
+    font-style: normal; /* Стили для наименования товара в строке товара в корзине */
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .food-price {
+    margin-left: auto; /* Стили для цены в строке товара в корзине */
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    width: 50px;
+  }
+  .counter-button {
+    width: 26px; /* Стили для кнопок счётчика в строке товара в корзине */
+    height: 19px;
+    display: flex; /* Задаю стили для расположения и внешнего вида символов внутри кнопок по центру */
+    font-size: 8px;
+    line-height: 14px;
+  }
+  .counter {
+    font-style: normal; /* Стили для значения счётчика в строке товара в корзине */
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .modal-footer {
+    display: flex; /* Стили для подвала корзины */
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .footer-buttons {
+    display: flex; /* Стили для блока с кнопками в подвале корзины */
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .modal-pricetag {
+    padding: 11px 16px; /* Стили для блока с ценой в корзине */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+  .modal-pricetag-extended {
+    display: inline;
+    margin-right: 5px;
+  }
+  .button-modal {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .button-modal:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 8px;
   }
 }
